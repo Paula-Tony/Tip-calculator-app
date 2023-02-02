@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1 class="main-title">
+        spli <br />
+        tter
+      </h1>
+      <form action="">
+        <div class="left">
+          <label for="bill" class="bill-label">Bill</label>
+          <div class="bill-amount">
+            <img src="images/icon-dollar.svg" alt="" />
+            <input type="text" id="bill" placeholder="0" />
+          </div>
+          <span class="tip-title">Select Tip %</span>
+          <div class="tip-percent">
+            <label>
+              <input type="radio" name="percent" value="5" />
+              5%
+            </label>
+            <label>
+              <input type="radio" name="percent" value="10" />
+              10%
+            </label>
+            <label>
+              <input type="radio" name="percent" value="15" />
+              15%
+            </label>
+            <label>
+              <input type="radio" name="percent" value="25" />
+              25%
+            </label>
+            <label>
+              <input type="radio" name="percent" value="50" />
+              50%
+            </label>
+            <input
+              type="text"
+              name="percent"
+              placeholder="custom"
+              class="custom"
+            />
+          </div>
+          <div class="people-title">
+            <label class="people-title" for="people">Number of People</label>
+            <span class="info">Can't be zero or less</span>
+          </div>
+          <div class="people-num">
+            <img src="images/icon-person.svg" alt="" />
+            <input type="text" id="people" placeholder="0" />
+          </div>
+        </div>
+        <div class="right">
+          <div class="up">
+            <div class="row tip-amount">
+              <p>
+                Tip Amount
+                <span>/ person</span>
+              </p>
+              <div class="result">
+                <img src="images/icon-dollar.svg" alt="" />
+                <h2>0.00</h2>
+              </div>
+            </div>
+            <div class="row total">
+              <p>
+                Total
+                <span>/ person</span>
+              </p>
+              <div class="result">
+                <img src="images/icon-dollar.svg" alt="" />
+                <h2>0.00</h2>
+              </div>
+            </div>
+          </div>
+          <button class="reset">Reset</button>
+        </div>
+      </form>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

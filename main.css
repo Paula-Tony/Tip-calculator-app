@@ -1,0 +1,243 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Space Mono", monospace;
+}
+.wrapper {
+  width: 1440px;
+  height: 1024px;
+  margin: auto;
+  background-color: hsl(185, 41%, 84%);
+}
+.wrapper .main-title {
+  padding: 153px 0 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 10px;
+  margin-left: 10px;
+  color: hsl(183, 100%, 15%);
+  margin-bottom: 79px;
+}
+form {
+  width: 920px;
+  background-color: hsl(0, 0%, 100%);
+  margin: auto;
+  border-radius: 25px;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  gap: 35px;
+}
+form .left {
+  flex: 1;
+  padding: 15px;
+}
+form .left .bill-label,
+form .left .tip-title,
+form .left .people-title label {
+  color: hsl(186, 14%, 43%);
+}
+form .left .bill-amount {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 5px 18px;
+  background-color: hsl(189, 41%, 97%);
+  margin-top: 8px;
+  margin-bottom: 40px;
+  border-radius: 5px;
+}
+form .left .bill-amount:has(input:focus) {
+  outline: 2px solid hsl(172, 67%, 45%);
+}
+form .left .bill-amount img {
+  width: 11px;
+  height: 17px;
+}
+form .left .bill-amount input {
+  margin-left: auto;
+  text-align: right;
+  background-color: transparent;
+  border: none;
+  font-family: "Space Mono";
+  font-size: 24px;
+  font-weight: 700;
+  color: hsl(183, 100%, 15%);
+  caret-color: hsl(183, 100%, 15%);
+}
+form .left .bill-amount input:focus {
+  outline: none;
+}
+form .left .bill-amount input::placeholder {
+  color: #9ebbbd;
+  font-weight: 700;
+  transition: 0.3s;
+}
+form .left .bill-amount input:focus::placeholder {
+  opacity: 0;
+}
+form .left .tip-percent {
+  margin-top: 17px;
+  margin-bottom: 43px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+form .left .tip-percent label {
+  background-color: hsl(183, 100%, 15%);
+  width: 110px;
+  text-align: center;
+  padding: 6px;
+  border-radius: 5px;
+  font-size: 24px;
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+  transition: 0.3s;
+}
+form .left .tip-percent label:hover {
+  background-color: hsl(172deg 67% 45% / 40%);
+  color: hsl(183, 100%, 15%);
+}
+form .left .tip-percent label:has(input:checked) {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+}
+form .left .tip-percent label input {
+  display: none;
+}
+form .left .tip-percent .custom {
+  width: 110px;
+  text-align: center;
+  padding: 6px;
+  border-radius: 5px;
+  font-family: "Space Mono";
+  font-size: 24px;
+  font-weight: 700;
+  border: none;
+  background-color: hsl(189, 41%, 97%);
+  text-align: right;
+  color: hsl(183, 100%, 15%);
+}
+form .left .tip-percent .custom::placeholder {
+  color: hsl(184, 14%, 56%);
+  caret-color: hsl(183, 100%, 15%);
+  font-family: "Space Mono";
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: capitalize;
+  transition: 0.3s;
+}
+form .left .tip-percent .custom:focus {
+  outline: 2px solid hsl(172, 67%, 45%);
+}
+form .left .tip-percent .custom:focus::placeholder {
+  opacity: 0;
+}
+form .left .people-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+form .left .people-title .info {
+  color: red;
+  display: none;
+  font-size: 13px;
+}
+form .left .people-title .info.active {
+  display: inline;
+}
+form .left .people-num {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 5px 18px;
+  background-color: hsl(189, 41%, 97%);
+  margin-top: 8px;
+  margin-bottom: 40px;
+  border-radius: 5px;
+}
+form .left .people-num img {
+  width: 13px;
+  height: 16px;
+}
+form .left .people-num input {
+  margin-left: auto;
+  text-align: right;
+  background-color: transparent;
+  border: none;
+  font-family: "Space Mono";
+  font-size: 24px;
+  font-weight: 700;
+  color: hsl(183, 100%, 15%);
+  caret-color: hsl(183, 100%, 15%);
+}
+form .left .people-num input:focus {
+  outline: none;
+}
+form .left .people-num input::placeholder {
+  color: #9ebbbd;
+  transition: 0.3s;
+}
+form .left .people-num input:focus::placeholder {
+  opacity: 0;
+}
+form .left .people-num:has(input:focus) {
+  outline: 2px solid hsl(172, 67%, 45%);
+}
+form .left .people-num.error {
+  outline: 2px solid red;
+}
+form .right {
+  flex: 1;
+  background-color: hsl(183, 100%, 15%);
+  padding: 35px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+form .right .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+form .right .row p {
+  color: hsl(0, 0%, 100%);
+}
+form .right .row p span {
+  display: block;
+  color: #9ebbbd;
+}
+form .right .row .result {
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  color: hsl(172, 67%, 45%);
+}
+form .right .row .result img {
+  width: 25px;
+  filter: invert(56%) sepia(100%) saturate(326%) hue-rotate(122deg)
+    brightness(93%) contrast(90%);
+}
+form .right .reset {
+  width: 100%;
+  background-color: hsl(183deg 100% 20%);
+  padding: 6px;
+  color: hsl(183, 100%, 15%);
+  border: none;
+  border-radius: 5px;
+  font-family: "Space Mono";
+  font-size: 24px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+form .right .reset:hover {
+  background-color: hsl(172, 67%, 45%);
+}
